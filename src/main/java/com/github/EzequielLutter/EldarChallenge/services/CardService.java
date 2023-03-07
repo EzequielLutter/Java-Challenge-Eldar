@@ -7,11 +7,11 @@ import java.time.LocalDate;
 public class CardService {
 
     public boolean iscardvalid(Card card){
-        if (card.getDueDate().compareTo(LocalDate.now())>0){ //traigo la fecha actual con el local date y la comparo con el dueDate de la card
-            return true;
-        }
+        return card.isValid();
+    }
 
-        return false;
+    public boolean isNotCardValid(Card card){
+        return card.isNotValid();
     }
 
 }

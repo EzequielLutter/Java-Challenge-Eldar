@@ -1,16 +1,18 @@
 package com.github.EzequielLutter.EldarChallenge.entities;
 
+import com.github.EzequielLutter.EldarChallenge.enums.CardBrand;
+
 import java.time.LocalDate;
 
 //Esto va a ser una entidad de dominio
 public class Card {
 
-    private String brand;
+    private CardBrand brand;
     private String cardNumber;
     private String cardHolder;
     private LocalDate dueDate;
 
-    public Card(String brand, String cardNumber, String cardHolder, LocalDate dueDate) {
+    public Card(CardBrand brand, String cardNumber, String cardHolder, LocalDate dueDate) {
         this.brand = brand;
         this.cardNumber = cardNumber;
         this.cardHolder = cardHolder;
@@ -18,7 +20,7 @@ public class Card {
 
     }
 
-    public String getBrand() {
+    public CardBrand getBrand() {
         return brand;
     }
 
@@ -32,5 +34,13 @@ public class Card {
 
     public LocalDate getDueDate() {
         return dueDate;
+    }
+
+    public boolean isValid() {
+       return dueDate.compareTo(LocalDate.now())>0;//traigo la fecha actual con el local date y la comparo con el dueDate de la card
+    }
+
+    public boolean isNotValid(){
+        return dueDate.compareTo(LocalDate.now())<0;
     }
 }
