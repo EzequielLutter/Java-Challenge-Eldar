@@ -36,11 +36,11 @@ public class Card {
         return dueDate;
     }
 
-    public boolean isValid() {
-       return dueDate.compareTo(LocalDate.now())>0;//traigo la fecha actual con el local date y la comparo con el dueDate de la card
+    public boolean isValid(LocalDate now) {
+       return dueDate.compareTo(now)>=0;//traigo la fecha actual con el local date y la comparo con el dueDate de la card
     }
 
-    public boolean isNotValid(){
-        return dueDate.compareTo(LocalDate.now())<0;
+    public boolean isNotValid(LocalDate now){
+        return dueDate.compareTo(now)<0;
     }
 }

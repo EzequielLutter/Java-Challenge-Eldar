@@ -19,8 +19,9 @@ public class CardServiceTest {
         String cardNumber= "2340 4560 6780 1235";
         String cardHolder= "Gino Luraschi";
         LocalDate dueDate= LocalDate.of(2025, Month.AUGUST, 30);
+        LocalDate now = LocalDate.of(2023, Month.MARCH, 23);
 
-        CardService cardService = new CardService();
+        CardService cardService = new CardService(now);
 
         Card card = new Card(brand, cardNumber, cardHolder, dueDate);
 
@@ -42,8 +43,9 @@ public class CardServiceTest {
         String cardNumber= "3456 6545 7896 2345";
         String cardHolder= "Ezequiel Lutter";
         LocalDate dueDate= LocalDate.of(1987,Month.AUGUST, 27);
+        LocalDate now = LocalDate.of(1989, Month.DECEMBER, 12);
 
-        CardService cardService= new CardService();
+        CardService cardService= new CardService(now);
 
         Card card = new Card(brand, cardNumber, cardHolder, dueDate);
 
