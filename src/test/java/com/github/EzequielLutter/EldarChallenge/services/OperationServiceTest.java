@@ -53,4 +53,7 @@ public class OperationServiceTest {
 
     assertEquals(resultado.doubleValue(), BigDecimal.valueOf(23/4).doubleValue()); //comparo el resultado con el valor de fecha de hoy
     }
+    //Agregar caso de Test para NARA y AMEX
+    //y para el caso de una tarjeta que no esta agregada en los casos
+    //probar casos de test en los ejercicios de DDR
 }
