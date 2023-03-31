@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class Card {
 
     private CardBrand brand;
-    private String cardNumber;
+    private String cardNumber;//Id
     private String cardHolder;
     private LocalDate dueDate;
 
